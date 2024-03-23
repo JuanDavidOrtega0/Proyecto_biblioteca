@@ -35,8 +35,8 @@
                         <td>1986</td>
                         <td>10</td>
                         <td>
-                            <a class="btn btn-warning" asp-controller="Usuarios" asp-action="Edit" asp-route-id="001">Editar</a>
-                            <a class="btn btn-danger" asp-controller="Usuarios" asp-action="Delete" asp-route-id="001">Eliminar</a>
+                            <button type="button" class="btn btn-warning" >Editar</button>
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">Eliminar</button>
                             <a class="btn btn-info" asp-controller="Usuarios" asp-action="Show" asp-route-id="001">Detalles</a>
                         </td>
                     </tr>
@@ -89,12 +89,10 @@
 <!-- Modal elimi -->
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
+
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -102,7 +100,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        estas seguro que deseas eliminar?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
