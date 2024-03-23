@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Fli Ortega García\\Desktop\\Proyecto_biblioteca\\Biblioteca\\Biblioteca.csproj": {}
+    "C:\\Users\\Anthony Munoz A\\Desktop\\Proyecto_biblioteca\\Biblioteca\\Biblioteca.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Fli Ortega García\\Desktop\\Proyecto_biblioteca\\Biblioteca\\Biblioteca.csproj": {
+    "C:\\Users\\Anthony Munoz A\\Desktop\\Proyecto_biblioteca\\Biblioteca\\Biblioteca.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Fli Ortega García\\Desktop\\Proyecto_biblioteca\\Biblioteca\\Biblioteca.csproj",
+        "projectUniqueName": "C:\\Users\\Anthony Munoz A\\Desktop\\Proyecto_biblioteca\\Biblioteca\\Biblioteca.csproj",
         "projectName": "Biblioteca",
-        "projectPath": "C:\\Users\\Fli Ortega García\\Desktop\\Proyecto_biblioteca\\Biblioteca\\Biblioteca.csproj",
-        "packagesPath": "C:\\Users\\Fli Ortega García\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Fli Ortega García\\Desktop\\Proyecto_biblioteca\\Biblioteca\\obj\\",
+        "projectPath": "C:\\Users\\Anthony Munoz A\\Desktop\\Proyecto_biblioteca\\Biblioteca\\Biblioteca.csproj",
+        "packagesPath": "C:\\Users\\Anthony Munoz A\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Anthony Munoz A\\Desktop\\Proyecto_biblioteca\\Biblioteca\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Fli Ortega García\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Anthony Munoz A\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
