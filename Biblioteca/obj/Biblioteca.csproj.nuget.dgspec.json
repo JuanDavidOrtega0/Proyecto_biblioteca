@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Fli Ortega García\\Desktop\\Proyecto Biblioteca\\Biblioteca\\Biblioteca.csproj": {}
+    "C:\\Users\\Fli Ortega García\\Desktop\\Proyecto_biblioteca\\Biblioteca\\Biblioteca.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Fli Ortega García\\Desktop\\Proyecto Biblioteca\\Biblioteca\\Biblioteca.csproj": {
+    "C:\\Users\\Fli Ortega García\\Desktop\\Proyecto_biblioteca\\Biblioteca\\Biblioteca.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Fli Ortega García\\Desktop\\Proyecto Biblioteca\\Biblioteca\\Biblioteca.csproj",
+        "projectUniqueName": "C:\\Users\\Fli Ortega García\\Desktop\\Proyecto_biblioteca\\Biblioteca\\Biblioteca.csproj",
         "projectName": "Biblioteca",
-        "projectPath": "C:\\Users\\Fli Ortega García\\Desktop\\Proyecto Biblioteca\\Biblioteca\\Biblioteca.csproj",
+        "projectPath": "C:\\Users\\Fli Ortega García\\Desktop\\Proyecto_biblioteca\\Biblioteca\\Biblioteca.csproj",
         "packagesPath": "C:\\Users\\Fli Ortega García\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Fli Ortega García\\Desktop\\Proyecto Biblioteca\\Biblioteca\\obj\\",
+        "outputPath": "C:\\Users\\Fli Ortega García\\Desktop\\Proyecto_biblioteca\\Biblioteca\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Fli Ortega García\\AppData\\Roaming\\NuGet\\NuGet.Config"
