@@ -8,20 +8,21 @@
   </head>
   <body>
     <div class="container">
-        <a class="btn btn-success mt-3" asp-controller="Usuarios" asp-action="Create">Registrar Usuario</a>
+        <button type="button" class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#usuariosRegistro">Registrar Usuario</button>
         <div class="tabla">
             <table class="table table-bordered border-dark mt-3 text-center">
                 <thead class="table table-dark">
                     <tr>
                         <th scope="col">Id</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Apellido</th>
-                        <th scope="col">Documento</th>
-                        <th scope="col">Tipo de Documento</th>
-                        <th scope="col">Dirección</th>
-                        <th scope="col">Teléfono</th>
-                        <th scope="col">Correo</th>
-                        <th scope="col">Acciones</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">NIT</th>
+                        <th scope="col">Type NIT</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Adress</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Actions</th>
                     </tr>
                 </thead>
                 <tbody class="tbody">
@@ -31,13 +32,14 @@
                         <td>Ortega</td>
                         <td>1020102010</td>
                         <td>Cédula</td>
+                        <td>18</td>
                         <td>Calle 123</td>
                         <td>3053051234</td>
                         <td>juanda@gmail.com</td>
                         <td>
-                            <a class="btn btn-warning" asp-controller="Usuarios" asp-action="Edit" asp-route-id="001">Editar</a>
-                            <a class="btn btn-danger" asp-controller="Usuarios" asp-action="Delete" asp-route-id="001">Eliminar</a>
-                            <a class="btn btn-info" asp-controller="Usuarios" asp-action="Show" asp-route-id="001">Detalles</a>
+                            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#usuariosEditar">Editar</button>
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#usuariosEliminar">Eliminar</button>
+                            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#usuariosDetalles">Detalles</button>
                         </td>
                     </tr>
                     <tr>
@@ -46,17 +48,302 @@
                         <td>Muñoz</td>
                         <td>1020102010</td>
                         <td>Cédula</td>
+                        <td>21</td>
                         <td>Calle 123</td>
                         <td>3053051234</td>
                         <td>Anthony@gmail.com</td>
                         <td>
-                            <a class="btn btn-warning" asp-controller="Usuarios" asp-action="Edit" asp-route-id="001">Editar</a>
-                            <a class="btn btn-danger" asp-controller="Usuarios" asp-action="Delete" asp-route-id="001">Eliminar</a>
-                            <a class="btn btn-info" asp-controller="Usuarios" asp-action="Show" asp-route-id="001">Detalles</a>
+                            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#usuariosEditar2">Editar</button>
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#usuariosEliminar">Eliminar</button>
+                            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#usuariosDetalles2">Detalles</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
+        </div>
+    </div>
+
+        <!-- Modal registrar -->
+    <div class="modal fade" id="usuariosRegistro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Registrar Usuario</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <label class="form-label"  for="">Nombre</label>
+                        <input class="form-control mb-3"  type="text" >
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Apellido</label>
+                        <input class="form-control mb-3"  type="text" >
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Documento</label>
+                        <input class="form-control mb-3"  type="text">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Tipo de Documento</label>
+                        <input class="form-control mb-3"  type="text">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Dirección</label>
+                        <input class="form-control mb-3"  type="text">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Teléfono</label>
+                        <input class="form-control mb-3"  type="text">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Correo</label>
+                        <input class="form-control mb-3"  type="text">
+                    </div>
+                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registroConfirmacion">Confirmar Registro</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Confirmación registro-->
+
+    <div class="modal fade" id="registroConfirmacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="registroConfirmacion">Registro Exitoso</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    El usuario ha sido registrado correctamente
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal eliminar -->
+
+    <div class="modal fade" id="usuariosEliminar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="usuariosEliminar">Precaución</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Estás seguro que deseas eliminar este usuario?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminarConfirmacion">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Confirmación eliminar-->
+
+    <div class="modal fade" id="eliminarConfirmacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="eliminarConfirmacion">Eliminado exitosamente</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    El usuario ha sido eliminado correctamente
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Editar Usuario 1-->
+
+    <div class="modal fade" id="usuariosEditar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="usuariosEditar">Editar Usuario</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <label class="form-label"  for="">Nombre</label>
+                        <input class="form-control mb-3"  type="text" value="Juan">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Apellido</label>
+                        <input class="form-control mb-3"  type="text" value="Ortega">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Documento</label>
+                        <input class="form-control mb-3"  type="text" value="1020102010">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Tipo de Documento</label>
+                        <input class="form-control mb-3"  type="text" value="Cédula">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Dirección</label>
+                        <input class="form-control mb-3"  type="text" value="Calle 123">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Teléfono</label>
+                        <input class="form-control mb-3"  type="text" value="3053051234">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Correo</label>
+                        <input class="form-control mb-3"  type="text" value="juanda@gmail.com">
+                    </div>
+                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editarConfirmacion">Actualizar Libro</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Editar Usuario 2-->
+
+    <div class="modal fade" id="usuariosEditar2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="usuariosEditar">Editar Usuario</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <label class="form-label"  for="">Nombre</label>
+                        <input class="form-control mb-3"  type="text" value="Anthony">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Apellido</label>
+                        <input class="form-control mb-3"  type="text" value="Muñoz">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Documento</label>
+                        <input class="form-control mb-3"  type="text" value="1020102010">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Tipo de Documento</label>
+                        <input class="form-control mb-3"  type="text" value="Cédula">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Dirección</label>
+                        <input class="form-control mb-3"  type="text" value="Calle 123">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Teléfono</label>
+                        <input class="form-control mb-3"  type="text" value="3053051234">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Correo</label>
+                        <input class="form-control mb-3"  type="text" value="Anthony@gmail.com">
+                    </div>
+                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editarConfirmacion">Actualizar Libro</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Confirmación editar-->
+
+    <div class="modal fade" id="editarConfirmacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="editarConfirmacion">Actualizado exitosamente</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    El usuario ha sido actualizado correctamente
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Detalles Usuario 1-->
+
+    <div class="modal fade" id="usuariosDetalles" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="usuariosDetalles">Detalles del Usuario</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            Nombre: Juan <br><br>
+                            Apellido: Ortega <br><br>
+                            Documento: 1020102010 <br><br>
+                            Tipo de Documento: Cédula <br><br>
+                        </div>
+                        <div class="col-md-6">
+                            Edad: 18 <br><br>
+                            Dirección: Calle 123 <br><br>
+                            Teléfono: 3053051234 <br><br>
+                            Correo: juanda@gmail.com <br><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Detalles Usuario 2-->
+
+    <div class="modal fade" id="usuariosDetalles2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="usuariosDetalles">Detalles del Usuario</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            Nombre: Anthony <br><br>
+                            Apellido: Muñoz <br><br>
+                            Documento: 1020102010 <br><br>
+                            Tipo de Documento: Cédula <br><br>
+                        </div>
+                        <div class="col-md-6">
+                            Edad: 21 <br><br>
+                            Dirección: Calle 123 <br><br>
+                            Teléfono: 3053051234 <br><br>
+                            Correo: Anthony@gmail.com <br><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
         </div>
     </div>
 
