@@ -88,7 +88,163 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registroConfirmacion">Confirmar Registro</button>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#prestamosRegistroConfirmacion">Confirmar Registro</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Confirmación Registro-->
+
+    <div class="modal fade" id="prestamosRegistroConfirmacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="registroConfirmacion">Registro Exitoso</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    El préstamo ha sido registrado correctamente
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Eliminar -->
+
+    <div class="modal fade" id="prestamosEliminar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="prestamosEliminar">Precaución</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Estás seguro que deseas eliminar este préstamo?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#prestamosEliminarConfirmacion">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Confirmación Eliminar-->
+
+    <div class="modal fade" id="prestamosEliminarConfirmacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="prestamoseliminarConfirmacion">Eliminado exitosamente</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    El préstamo ha sido eliminado correctamente
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Editar-->
+
+    <div class="modal fade" id="prestamosEditar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="usuariosEditar">Editar Préstamo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <label class="form-label"  for="">Id Usuario</label>
+                        <input class="form-control mb-3"  type="text" value="001">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Bibliotecario</label>
+                        <input class="form-control mb-3"  type="text" value="Robinson">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Id Libro</label>
+                        <input class="form-control mb-3"  type="text" value="01">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Fecha Préstamo</label>
+                        <input class="form-control mb-3"  type="text" value="21/03/2024">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Fecha Devolución</label>
+                        <input class="form-control mb-3"  type="text" value="24/03/2024">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Estado Libro</label>
+                        <input class="form-control mb-3"  type="text" value="Prestado">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Renovación</label>
+                        <input class="form-control mb-3"  type="text" value="Si">
+                    </div>
+                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#prestamosEditarConfirmacion">Actualizar Préstamo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Confirmación Editar-->
+
+    <div class="modal fade" id="prestamosEditarConfirmacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="editarConfirmacion">Actualizado exitosamente</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    El préstamo ha sido actualizado correctamente
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Detalles--->
+
+    <div class="modal fade" id="prestamosDetalles" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="prestamosDetalles">Detalles del Préstamo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            Id Usuario: 001 <br><br>
+                            Bibliotecario: Robinson <br><br>
+                            Id Libro: 01 <br><br>
+                            Fecha Préstamo: 21/03/2024 <br><br>
+                        </div>
+                        <div class="col-md-6">
+                            Fecha Devolución: 24/03/2024 <br><br>
+                            Estado Libro: Prestado <br><br>
+                            Renovación: Si <br><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
