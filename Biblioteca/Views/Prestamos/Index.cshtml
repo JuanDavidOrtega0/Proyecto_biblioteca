@@ -8,7 +8,8 @@
   </head>
   <body style="background-color: rgb(217, 206, 213);">
     <div class="container">
-        <a class="btn btn-success mt-3" asp-controller="Prestamos" asp-action="Create">Registrar Préstamo</a>
+        <button type="button" class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#prestamosRegistro">Registrar Préstamo</button>
+        <div class="tabla">
         <div class="tabla">
             <table class="table table-bordered border-dark mt-3 text-center">
                 <thead class="table table-dark">
@@ -35,13 +36,61 @@
                         <td>Prestado</td>
                         <td>Si</td>
                         <td>
-                            <a class="btn btn-warning" asp-controller="Usuarios" asp-action="Edit" asp-route-id="001">Editar</a>
-                            <a class="btn btn-danger" asp-controller="Usuarios" asp-action="Delete" asp-route-id="001">Eliminar</a>
-                            <a class="btn btn-info" asp-controller="Usuarios" asp-action="Show" asp-route-id="001">Detalles</a>
+                            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#prestamosEditar" >Editar</button>
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#prestamosEliminar">Eliminar</button>
+                            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#prestamosDetalles">Detalles</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
+        </div>
+    </div>
+
+    <!-- Modal Registrar -->
+    
+    <div class="modal fade" id="prestamosRegistro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="prestamosRegistro">Registrar Préstamo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <label class="form-label"  for="">Id Usuario</label>
+                        <input class="form-control mb-3"  type="text" >
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Bibliotecario</label>
+                        <input class="form-control mb-3"  type="text" >
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Id Libro</label>
+                        <input class="form-control mb-3"  type="text">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Fecha Préstamo</label>
+                        <input class="form-control mb-3"  type="text">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Fecha Devolución</label>
+                        <input class="form-control mb-3"  type="text">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Estado Libro</label>
+                        <input class="form-control mb-3"  type="text">
+                    </div>
+                    <div>
+                        <label class="form-label"  for="">Renovación</label>
+                        <input class="form-control mb-3"  type="text">
+                    </div>
+                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registroConfirmacion">Confirmar Registro</button>
+                </div>
+            </div>
         </div>
     </div>
 
