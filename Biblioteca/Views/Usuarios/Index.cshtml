@@ -1,3 +1,4 @@
+@model List<Biblioteca.Models.Usuarios>
 <!doctype html>
 <html lang="en">
   <head>
@@ -26,38 +27,26 @@
                     </tr>
                 </thead>
                 <tbody class="table table-secondary">
-                    <tr>
-                        <td>001</td>
-                        <td>Juan</td>
-                        <td>Ortega</td>
-                        <td>1020102010</td>
-                        <td>Cédula</td>
-                        <td>18</td>
-                        <td>Calle 123</td>
-                        <td>3053051234</td>
-                        <td>juanda@gmail.com</td>
+                    @foreach(Usuarios Usuario in @Model)
+                    {
+                        <tr>
+                        <td>@Usuario.Id</td>
+                        <td>@Usuario.Name</td>
+                        <td>@Usuario.LastName</td>
+                        <td>@Usuario.Nit</td>
+                        <td>@Usuario.TypeNit</td>
+                        <td>@Usuario.Age</td>
+                        <td>@Usuario.Adress</td>
+                        <td>@Usuario.PhoneNumber</td>
+                        <td>@Usuario.Email</td>
                         <td>
                             <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#usuariosEditar">Editar</button>
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#usuariosEliminar">Eliminar</button>
                             <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#usuariosDetalles">Detalles</button>
                         </td>
                     </tr>
-                    <tr>
-                        <td>002</td>
-                        <td>Anthony</td>
-                        <td>Muñoz</td>
-                        <td>1020102010</td>
-                        <td>Cédula</td>
-                        <td>21</td>
-                        <td>Calle 123</td>
-                        <td>3053051234</td>
-                        <td>Anthony@gmail.com</td>
-                        <td>
-                            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#usuariosEditar2">Editar</button>
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#usuariosEliminar">Eliminar</button>
-                            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#usuariosDetalles2">Detalles</button>
-                        </td>
-                    </tr>
+                    }
+                  
                 </tbody>
             </table>
         </div>

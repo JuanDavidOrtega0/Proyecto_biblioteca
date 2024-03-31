@@ -1,3 +1,5 @@
+@model List<Biblioteca.Models.Libros>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -24,22 +26,26 @@
                     </tr>
                 </thead>
                 <tbody class="table table-secondary">
+                  @foreach(Libros libro in @Model)
+                  {
                     <tr>
-                        <td>01</td>
+                        <td>@libro.Id</td>
                         <td>
-                            <img class="img-fluid" src="https://images.cdn1.buscalibre.com/fit-in/360x360/03/0a/030a419b5cbfda84843b6b9fdc5d8273.jpg" alt="" width="35px" height="35px">
+                            <img class="img-fluid" src=@libro.FrontPage alt="" width="35px" height="35px">
                         </td>
-                        <td>It</td>
-                        <td>Stephen King</td>
-                        <td>Terror</td>
-                        <td>1986</td>
-                        <td>10</td>
+                        <td>@libro.title</td>
+                        <td>@libro.author</td>
+                        <td>@libro.genre</td>
+                        <td>@libro.PublicationDate</td>
+                        <td>@libro.CopiesAvailable</td>
                         <td>
                             <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#librosEditar" >Editar</button>
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#librosEliminar">Eliminar</button>
                             <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#librosDetalles">Detalles</button>
                         </td>
                     </tr>
+                  }
+                    
                 </tbody>
             </table>
         </div>

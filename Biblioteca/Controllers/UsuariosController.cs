@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
+using Biblioteca.Models;
 namespace Biblioteca.Controllers
 {
     public class UsuariosController : Controller
     {
         public IActionResult Index()
         {
-            return View();
+            var usuario = GetData();
+            return View(usuario);
         }
         public IActionResult Delete()
         {
@@ -35,5 +37,36 @@ namespace Biblioteca.Controllers
         {
             return View();
         }
+
+        public List<Usuarios> GetData()
+        {
+            List<Usuarios> Usuario = new List<Usuarios>();
+            Usuario.Add(new Usuarios
+            {
+                Id = 1,
+                Name = "Juan",
+                LastName = "Ortega",
+                Nit = 1020102010,
+                TypeNit = "Cédula",
+                Age = 18,
+                Adress = "Calle 123",
+                PhoneNumber = "3053051234",
+                Email = "juanda@gmail.com"
+            });
+            Usuario.Add(new Usuarios
+            {
+                Id = 2,
+                Name = "Anthony",
+                LastName = "Muñoz",
+                Nit = 1020102010,
+                TypeNit = "Cédula",
+                Age = 21,
+                Adress = "Calle 123",
+                PhoneNumber = "3053051234",
+                Email = "Anthony@gmail.com"
+            });
+            return Usuario;
+        }
     }
 }
+
