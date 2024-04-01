@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "Ksr949H3QXaNuMND7O/X0pxn+A6jDP7giVh3megwenTdRS7dgfSIWsnrtDgxch6bUz0fOqsZcjHcfWnAz3Ad9w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Anthony Munoz A\\Desktop\\biblioteca\\Proyecto_biblioteca\\Biblioteca\\Biblioteca.csproj",
@@ -51,5 +52,11 @@
     "C:\\Users\\Anthony Munoz A\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
     "C:\\Users\\Anthony Munoz A\\.nuget\\packages\\zstdsharp.port\\0.7.1\\zstdsharp.port.0.7.1.nupkg.sha512"
   ],
+=======
+  "dgSpecHash": "PCSvSIppT6s4q2pG+aZCl/wzPA5sy6DZzIZknG67h+wF5ARW/hX1f8PUtAABChvuwIR4bsYTZW2N7SR5UTDKdg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Fli Ortega García\\Desktop\\Proyecto_biblioteca\\Biblioteca\\Biblioteca.csproj",
+  "expectedPackageFiles": [],
+>>>>>>> 7534e6551d21fa55a2b9b3aede2e1681afa0ab04
   "logs": []
 }
