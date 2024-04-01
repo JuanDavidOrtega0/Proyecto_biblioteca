@@ -1,4 +1,8 @@
+using Biblioteca.Datos;
+using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseMySQL(builder.Configuration.GetConnectionString("ConexionSql")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

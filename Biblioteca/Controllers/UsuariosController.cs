@@ -1,13 +1,19 @@
 using Microsoft.AspNetCore.Mvc;
 using Biblioteca.Models;
+using Biblioteca.Datos;
+using Microsoft.EntityFrameworkCore;
 namespace Biblioteca.Controllers
 {
     public class UsuariosController : Controller
     {
-        public IActionResult Index()
+        private readonly ApplicationDbContext _context;
+        public UsuariosController(ApplicationDbContext context)
         {
-            var usuario = GetData();
-            return View(usuario);
+            _context = context;
+        }
+        [HttpGet]
+        public async Task<IActionResult> Index(){
+            return View(await _context.MVC.ToListAsync());
         }
         public IActionResult Delete()
         {
